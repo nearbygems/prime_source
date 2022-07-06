@@ -13,6 +13,6 @@ public interface TaskRepository extends PagingAndSortingRepository<Task, Long> {
 
   Optional<Task> findByIdAndUsername(Long id, String username);
 
-  Page<Task> findTasksByUsernameEquals(String username, Pageable pageable);
+  Page<Task> findTasksByUsername(String username, Pageable pageable);
 
 }

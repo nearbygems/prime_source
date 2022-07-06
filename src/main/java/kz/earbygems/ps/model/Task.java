@@ -1,6 +1,7 @@
 package kz.earbygems.ps.model;
 
 import lombok.Data;
+import lombok.experimental.FieldNameConstants;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,6 +11,7 @@ import java.time.LocalDate;
 
 @Data
 @Entity
+@FieldNameConstants
 public class Task {
 
   @Id

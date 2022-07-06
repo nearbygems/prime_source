@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/prime_source
+    username: prime_source
+    password: prime_source
+    hikari:
+      schema: prime_source
+  flyway:
+    url: jdbc:postgresql://localhost:5432/prime_source
+    user: prime_source
+    password: prime_source
+    schemas: prime_source
+    enabled: false
+
+jwt:
+  secret: prime_source

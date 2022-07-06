@@ -22,7 +22,9 @@ public class TaskServiceImpl implements TaskService {
   @Override
   public List<Task> get(Integer offset, Integer limit, String sort) {
 
-    var tasks = repository.findTasksByUsernameEquals(authService.currentUser(), PageRequest.of(offset, limit, Sort.by(sort)));
+    var page = PageRequest.of(offset, limit, Sort.by(sort));
+
+    var tasks = repository.findTasksByUsername(authService.currentUser(), page);
 
     if (tasks.hasContent()) {
       return tasks.getContent();
