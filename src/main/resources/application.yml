@@ -12,3 +12,6 @@ spring:
     password: prime_source
     schemas: prime_source
     enabled: true
+
+jwt:
+  secret: prime_source

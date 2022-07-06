@@ -18,5 +18,6 @@ public class Task {
   private LocalDate date;
   private String description;
   private boolean done;
+  private String username;
 
 }

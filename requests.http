@@ -1,0 +1,43 @@
+GET http://localhost:8080/actuator/health
+
+###
+POST http://localhost:8080/login?username=admin&password=admin
+
+###
+POST http://localhost:8080/users?username=user&password=user&role=USER
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY1NzExMTQzOX0.UdPaB3t0GdWW3OLYA0o74lkj2rS8I2PyNdlBr7CQKK0Lk6VrPtBxqPjgY0vlRygy6tgZ5YBpOvfdaHoSbplBRw
+
+###
+DELETE http://localhost:8080/users?username=user
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY1NzExMTQzOX0.UdPaB3t0GdWW3OLYA0o74lkj2rS8I2PyNdlBr7CQKK0Lk6VrPtBxqPjgY0vlRygy6tgZ5YBpOvfdaHoSbplBRw
+
+###
+POST http://localhost:8080/users?username=user1&password=user1&role=USER
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY1NzExMTQzOX0.UdPaB3t0GdWW3OLYA0o74lkj2rS8I2PyNdlBr7CQKK0Lk6VrPtBxqPjgY0vlRygy6tgZ5YBpOvfdaHoSbplBRw
+
+###
+POST http://localhost:8080/users?username=user2&password=user2&role=USER
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY1NzExMTQzOX0.UdPaB3t0GdWW3OLYA0o74lkj2rS8I2PyNdlBr7CQKK0Lk6VrPtBxqPjgY0vlRygy6tgZ5YBpOvfdaHoSbplBRw
+
+###
+POST http://localhost:8080/login?username=user2&password=user2
+
+###
+POST http://localhost:8080/tasks
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMiIsImV4cCI6MTY1NzExMTc3MX0.GaV1q2CbkIBmN1VDBb1buQhTUMqKwXNyUtFEa7WNoqldy2tPs722XF1g6ki15bw1AelHjB_KZYTKKVs_KVfm6w
+Content-Type: application/json
+
+{
+  "id": 3,
+  "date": "2022-07-15",
+  "description": "description3",
+  "done": true
+}
+
+###
+GET http://localhost:8080/tasks?offset=0&limit=5&sort=date
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMiIsImV4cCI6MTY1NzExMTc3MX0.GaV1q2CbkIBmN1VDBb1buQhTUMqKwXNyUtFEa7WNoqldy2tPs722XF1g6ki15bw1AelHjB_KZYTKKVs_KVfm6w
+
+###
+GET http://localhost:8080/tasks/3
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMiIsImV4cCI6MTY1NzExMTc3MX0.GaV1q2CbkIBmN1VDBb1buQhTUMqKwXNyUtFEa7WNoqldy2tPs722XF1g6ki15bw1AelHjB_KZYTKKVs_KVfm6w
